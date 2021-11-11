@@ -1,0 +1,33 @@
+﻿@model IEnumerable<MVCVuelos.Models.Vuelo>
+<h4>@Html.ActionLink("Nuevo", "Create", "Vuelo")</h4>
+
+
+
+@using (Html.BeginForm("BuscarPorDestino", "Vuelo", FormMethod.Get))
+{
+    @Html.TextBox("Destino")
+    <input type="submit" value="Buscar por destino" />
+}
+<table>
+    <tr>
+        <th>@Html.DisplayNameFor(model => model.Origen)</th>
+        <th>@Html.DisplayNameFor(model => model.Destino)</th>
+        <th>@Html.DisplayNameFor(model => model.Fecha)</th>
+        <th>@Html.DisplayNameFor(model => model.Matricula)</th>
+        <th>Detalles</th>
+        <th>Eliminar</th>
+        <th>Editar</th>
+    </tr>
+    @foreach (var item in Model)
+    {
+        <tr>
+            <td>@Html.DisplayFor(model => item.Origen)</td>
+            <td>@Html.DisplayFor(model => item.Destino)</td>
+            <td>@Html.DisplayFor(model => item.Fecha)</td>
+            <td>@Html.DisplayFor(model => item.Matricula)</td>
+            <td>@Html.ActionLink("Detalles", "Detail", new { id = item.Id })</td>
+            <td>@Html.ActionLink("Eliminar", "Delete", new { id = item.Id })</td>
+            <td>@Html.ActionLink("Modificar", "Edit", new { id = item.Id })</td>
+        </tr>
+    }
+</table>

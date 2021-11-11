@@ -1,0 +1,33 @@
+﻿<!DOCTYPE html>
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title>Vuelos</title>
+    <link href="~/Content/main.css" rel="stylesheet" />
+</head>
+<body>
+    <header><h1>SISTEMA VUELOS</h1></header>
+    <nav>
+        @Html.ActionLink("Home", "Index", "Home")
+        @Html.ActionLink("Vuelos", "Index", "Vuelo")
+    </nav>
+    <main>
+        <aside id="aside">
+            @if (IsSectionDefined("ZonaOpcional"))
+            {
+                @RenderSection("ZonaOpcional")
+            }
+            else
+            {
+                <img id="imgavion" src="~/Images/imagenC.jpg" />
+                <img id="imgavion2" src="~/Images/imagenD.jpg" />
+            }
+        </aside>
+        <article>@RenderBody();</article>
+    </main>
+    <footer>
+        <p>Info@vuelo.com</p>
+    </footer>
+</body>
+</html>

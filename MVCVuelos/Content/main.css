@@ -1,0 +1,66 @@
+﻿﻿body {
+    height: 750px;
+    margin: auto;
+}
+
+header {
+    line-height: 210px;
+    text-align: center;
+    background-color: black;
+    color: white;
+    height: 250px;
+    font-size: 60px;
+    font-family: 'Times New Roman', Times, serif;
+}
+
+nav {
+    text-align: center;
+    background-color: royalblue;
+    color: blue;
+    height: 50px;
+    clear: both;
+    font-size: 25px;
+}
+
+footer {
+    background-color: black;
+    color: white;
+    text-align: center;
+    height: 50px;
+    clear: both;
+}
+
+#aside {
+    float: left;
+    background-color: black;
+    width: 20%;
+    height: 400px;
+    color: white;
+}
+
+article {
+    float: left;
+    width: 80%;
+    height: 400px;
+    font-size: 20px
+}
+
+#imgavion {
+    height: 200px;
+    width: 100%;
+}
+
+#imgavion2 {
+    height: 195.5px;
+    width: 100%;
+}
+
+#imgciudad1 {
+    height: 200px;
+    width: 100%;
+}
+
+#imgciudad2 {
+    height: 195.5px;
+    width: 100%;
+}
